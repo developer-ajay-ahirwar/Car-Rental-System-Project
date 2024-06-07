@@ -4,13 +4,14 @@ class Car {
   private String model;
   private double basePriceOfDay;
   private boolean isAvailable;
-
-  public Car(String name,String brand, String model , double basePriceOfDay , boolean isAvailable){
+  //remove the Argument is isAvailable in the Constractor
+  public Car(String name,String brand, String model , double basePriceOfDay){
     this.name = name;
     this.brand = brand;
     this.model = model;
     this.basePriceOfDay = basePriceOfDay;
-    this.isAvailable = isAvailable;
+    //default set the true isAvailable
+    this.isAvailable = true;
   }
   public String getName(){
     return this.name;
@@ -27,10 +28,10 @@ class Car {
   public boolean getIsAvailable(){
     return this.isAvailable;
   }
-  public void setBasePriceOfDay(double basePriceOfDay){
-    this.basePriceOfDay = basePriceOfDay;
+  public void rent(){
+    isAvailable = false;
   }
-  public void setIsAvailable(boolean IsAvailable){
-    this.isAvailable = IsAvailable;
+  public double calculetorOfDay(int rentOFDay){
+    return basePriceOfDay * rentOFDay;
   }
 }
