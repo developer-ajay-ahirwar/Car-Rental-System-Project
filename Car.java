@@ -31,6 +31,9 @@ class Car {
   public void rent(){
     isAvailable = false;
   }
+  public void returnCar(){
+    isAvailable = true;
+  }
   public double calculetorOfDay(int rentOFDay){
     return basePriceOfDay * rentOFDay;
   }
