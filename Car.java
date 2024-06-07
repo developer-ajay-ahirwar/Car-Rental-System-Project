@@ -1,5 +1,7 @@
 class Car {
-  public static void main(String[] args){
-    
-  }
+  private String name;
+  private String brand;
+  private String model;
+  private double basePriceOfDay;
+  private boolean isAvailable;
 }
